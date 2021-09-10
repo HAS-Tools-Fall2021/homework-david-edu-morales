@@ -122,6 +122,64 @@ for m in range(len(flow)):
 perc = len(ilist)/len(total_sept_days)
 print(perc*100)
 
+pre2000 = []
+for i in range(len(flow)):
+        if flow [i] >= y and year [i] > 2000 and month[i] == 9:
+                pre2000.append(i)
+
+# see how many times the criteria was met by checking the length
+# of the index list that was generated
+print("Daily flow avg from 1989 to 2000 has been greater than",y,len(pre2000), "times.")
+
+total_sept_days = []
+for m in range(len(flow)):
+        if year [m] < 2000 and month [m] == 9:
+                total_sept_days.append(m)
+perc = len(pre2000)/len(total_sept_days)
+print(perc*100)
+
+# During the year 2000:
+year2000 = []
+for i in range(len(flow)):
+        if flow [i] >= y and year [i] == 2000 and month[i] == 9:
+                year2000.append(i)
+print("Daily flow avg during year 2000 has been greater than",y,len(year2000), "times.")
+
+total_sept_days = []
+for m in range(len(flow)):
+        if year [m] == 2000 and month [m] == 9:
+                total_sept_days.append(m)
+perc = len(year2000)/len(total_sept_days)
+print(perc*100)
+
+# During the year 2010:
+year2010 = []
+for i in range(len(flow)):
+        if flow [i] >= y and year [i] == 2010 and month[i] == 9:
+                year2010.append(i)
+print("Daily flow avg during year 2010 has been greater than",y,len(year2010), "times.")
+
+total_sept_days = []
+for m in range(len(flow)):
+        if year [m] == 2010 and month [m] == 9:
+                total_sept_days.append(m)
+perc = len(year2010)/len(total_sept_days)
+print(perc*100)
+
+# After the year 2010:
+post2010 = []
+for i in range(len(flow)):
+        if flow [i] >= y and year [i] > 2010 and month[i] == 9:
+                post2010.append(i)
+print("Daily flow avg after year 2010 has been greater than",y,len(post2010), "times.")
+
+total_sept_days = []
+for m in range(len(flow)):
+        if year [m] > 2010 and month [m] == 9:
+                total_sept_days.append(m)
+perc = len(post2010)/len(total_sept_days)
+print(perc*100)
+
 # %%
 # Searching across every iteration of Sept. 20-26 since 1989 to find the average value.
 sept_20_26 = []
@@ -148,7 +206,7 @@ for i in range(len(flow)):
 
 # see how many times the criteria was met by checking the length
 # of the index list that was generated
-print("Daily flow avg has been greater than",y,len(ilist), "times.")
+print("Daily flow avg has been greater than",z,len(ilist), "times.")
 
 total_sept_days = []
 for m in range(len(flow)):
@@ -156,5 +214,67 @@ for m in range(len(flow)):
                 total_sept_days.append(m)
 perc = len(ilist)/len(total_sept_days)
 print(perc*100)
+
+# %%
+#Finding flow average for 1st half of Sept. since 1989:
+sept_first_half = []
+daily_flow = []
+for f in range(len(flow)):
+        if month[f] == 9 and day[f] >= 1 and day[f] <= 15:
+                sept_first_half.append(f)
+for f_value in sept_first_half:
+        daily_flow.append(flow [f_value])
+
+z = sum(daily_flow)/len(daily_flow)
+print("Avg. flow for first half of Sept. since 1989:", z)
+# %%
+#Finding flow average for 2nd half of Sept. since 1989:
+sept_second_half = []
+daily_flow = []
+for f in range(len(flow)):
+        if month[f] == 9 and day[f] >= 16 and day[f] <= 30:
+                sept_second_half.append(f)
+for f_value in sept_second_half:
+        daily_flow.append(flow [f_value])
+
+z = sum(daily_flow)/len(daily_flow)
+print("Avg. flow for second half of Sept. since 1989:", z)
+
+# %%
+# %%
+# Evaluating how many times daily avg flow surpassed prediciton in years prior to 2000:
+sept_13_19 = []
+daily_flow = []
+for f in range(len(flow)):
+        if month[f] == 9 and day[f] >= 13 and day[f] <= 19:
+                sept_13_19.append(f)
+for f_value in sept_13_19:
+        daily_flow.append(flow [f_value])
+
+y = sum(daily_flow)/len(daily_flow)
+print("Avg. flow for Sept. 13-19 since 1989:", y)
+
+# Making and empty list that I will use to store
+# index values I'm interested in
+ilist = []
+
+# Loop over the length of the flow list
+# and adding the index value to the ilist
+# if it meets some criteria that I specify
+for i in range(len(flow)):
+        if flow [i] >= y and year [i] > 2000 and month[i] == 9:
+                ilist.append(i)
+
+# see how many times the criteria was met by checking the length
+# of the index list that was generated
+print("Daily flow avg from 1989 to 2000 has been greater than",y,len(ilist), "times.")
+
+total_sept_days = []
+for m in range(len(flow)):
+        if year [m] < 2000 and month [m] == 9:
+                total_sept_days.append(m)
+perc = len(ilist)/len(total_sept_days)
+print(perc*100)
+
 
 # %%
