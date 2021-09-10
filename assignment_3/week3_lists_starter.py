@@ -98,8 +98,29 @@ for f_value in sept_13_19:
         daily_flow.append(flow [f_value])
 
 y = sum(daily_flow)/len(daily_flow)
-print("# of flow values:", len(sept_13_19))
 print("Avg. flow for Sept. 13-19 since 1989:", y)
+
+# Making and empty list that I will use to store
+# index values I'm interested in
+ilist = []
+
+# Loop over the length of the flow list
+# and adding the index value to the ilist
+# if it meets some criteria that I specify
+for i in range(len(flow)):
+        if flow [i] >= y and month[i] == 9:
+                ilist.append(i)
+
+# see how many times the criteria was met by checking the length
+# of the index list that was generated
+print("Daily flow avg has been greater than",y,len(ilist), "times.")
+
+total_sept_days = []
+for m in range(len(flow)):
+        if month [m] == 9:
+                total_sept_days.append(m)
+perc = len(ilist)/len(total_sept_days)
+print(perc*100)
 
 # %%
 # Searching across every iteration of Sept. 20-26 since 1989 to find the average value.
@@ -112,9 +133,8 @@ for f_value in sept_20_26:
         daily_flow.append(flow [f_value])
 
 z = sum(daily_flow)/len(daily_flow)
-print("# of flow values:", len(sept_20_26))
 print("Avg. flow for Sept. 20-26 since 1989:", z)
-# %%
+
 # Making and empty list that I will use to store
 # index values I'm interested in
 ilist = []
@@ -123,41 +143,18 @@ ilist = []
 # and adding the index value to the ilist
 # if it meets some criteria that I specify
 for i in range(len(flow)):
-        if flow [i] >= 159 and month[i] == 9:
+        if flow [i] >= z and month[i] == 9:
                 ilist.append(i)
 
 # see how many times the criteria was met by checking the length
 # of the index list that was generated
-print(len(ilist))
+print("Daily flow avg has been greater than",y,len(ilist), "times.")
 
 total_sept_days = []
 for m in range(len(flow)):
         if month [m] == 9:
                 total_sept_days.append(m)
-print(len(total_sept_days))
-print(len(ilist)/len(total_sept_days))
-
-# %%
-# Making and empty list that I will use to store
-# index values I'm interested in
-ilist = []
-
-# Loop over the length of the flow list
-# and adding the index value to the ilist
-# if it meets some criteria that I specify
-for i in range(len(flow)):
-        if flow [i] > 193.6 and month[i] == 9:
-                ilist.append(i)
-
-# see how many times the criteria was met by checking the length
-# of the index list that was generated
-print(len(ilist))
-
-total_sept_days = []
-for m in range(len(flow)):
-        if month [m] == 9:
-                total_sept_days.append(m)
-print(len(total_sept_days))
-print(len(ilist)/len(total_sept_days))
+perc = len(ilist)/len(total_sept_days)
+print(perc*100)
 
 # %%
