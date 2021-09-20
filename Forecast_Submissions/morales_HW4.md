@@ -1,4 +1,11 @@
 # David Morales, 09/19/21, HW4
+_______
+## Grade: 
+**3/3**: great job! I like your logic in the forecast and the fact that you are looking into trends. When we work with timeseries and pandas dataframes I will show you some really easy ways to summarize data like this by years. Also stop by my office hours if you want help with your looping to do the average annual flow with a numpy array. Its definitely possible with this too. 
+
+ One note for next time: 
+ - I'm not grading  the python scripts for content specifically yet but just a note that its a bit hard to follow  because the comments are still the comments from the starter code. Next time organize by question and modify the comments to be relevant to what you are doing
+_________
 
 ## Rationale:
 I still believe there is a lot of knowledge to be acquired looking at average values of the week that I'm estimating. I looked at all flows between 9/19-25 since 1989 and took the average; I obtained 193cfs just as I did last week. It then occurred to me that 193 was an average that didn't take years into consideration; perhaps the average value was being skewed by powerful flows from earlier years.
