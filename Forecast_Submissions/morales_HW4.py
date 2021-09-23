@@ -49,6 +49,9 @@ del(data)
 # 3. Day of the month
 # 4. Flow value in CFS
 
+### Information about flow_data:
+flow_data.shape
+type(flow_data)
 # _______________
 # Example 1: counting the number of values with flow > 600 and month ==7
 # Note we are doing this by asking for the rows where the flow column (i.e. Flow_data[:,3]) is >600
@@ -81,6 +84,34 @@ flow_std_19_25 = np.std(flow_data[(flow_data[:,0] >= 2010) & (flow_data[:,1] ==9
         (flow_data[:,2] >= 19) & (flow_data[:,2] <= 25 ), 3])
 print("68% of flow is between", 109-flow_std_19_25, "and", 109+flow_std_19_25)
 
+#_______Testing how often Sept. flow was greater than 95cfs________
+greater_flow = np.sum((flow_data[:,1] == 9) & (flow_data[:,3] > 95))
+sept_flow = np.sum(flow_data[:,1] == 9)
+print("Sept. flow > 95:", greater_flow)
+print("Percentage greater than 95:", greater_flow/sept_flow)
+#__________________________________________________________________
+
+#_______Testing Sept. flow from before Year 2000________
+greater_flow_2000 = np.sum((flow_data[:,0] <= 2000) & (flow_data[:,1] == 9) & (flow_data[:,3] > 95))
+sept_2000_flow = np.sum((flow_data[:,0] <= 2000) & (flow_data[:,1] == 9))
+print("Sept. flow before 2000 > 95:", greater_flow_2000)
+print("Percentage greater than 95 before 2000:", greater_flow_2000/sept_2000_flow)
+#__________________________________________________________________
+
+#_______Testing Sept. flow from before Year 2000________
+greater_flow_2010 = np.sum((flow_data[:,0] >= 2010) & (flow_data[:,1] == 9) & (flow_data[:,3] > 95))
+sept_2010_flow = np.sum((flow_data[:,0] >= 2010) & (flow_data[:,1] == 9))
+print("Sept. flow after 2010 > 95:", greater_flow_2010)
+print("Percentage greater than 95 after 2010:", greater_flow_2010/sept_2010_flow)
+#__________________________________________________________________
+
+#_______Sept. flow 1st half versus 2nd half________
+sept_first_half = np.mean(flow_data[(flow_data[:,1] == 9) & (flow_data[:,2] <= 15),3])
+sept_second_half = np.mean(flow_data[(flow_data[:,1] == 9) & (flow_data[:,2] >= 16),3])
+print("Avg. flow of 1st half:", sept_first_half)
+print("Avg. flow of 2nd half:", sept_second_half)
+#__________________________________________________________________
+
 # 2.b The same thing split out into multiple steps
 criteria = (flow_data[:, 3] > 600) & (flow_data[:, 1] == 7)  # This returns an array of true fals values with an entrry for every day, telling us where our criteria are met
 flow_pick = flow_data[criteria, 3] #Grab out the 4th column (i.e. flow) for every row wherer the criteria was true
@@ -93,7 +124,7 @@ print('And has an average value of', np.round(flow_mean,2), "when this is true")
 ## Example 3: Make a histogram of data
 
 # step 1: Use the linspace  funciton to create a set  of evenly spaced bins
-mybins = np.linspace(0, 800, num=50)
+mybins = np.linspace(0, 300, num=50)
 # another example using the max flow to set the upper limit for the bins
 #mybins = np.linspace(0, np.max(flow_data[:,3]), num=15) 
 
@@ -102,13 +133,22 @@ plt.hist(flow_data[(flow_data[:,0] >= 2010) & (flow_data[:,1] == 9) & (flow_data
 plt.title('Streamflow for 9/19-25 since 2010')
 plt.xlabel('Flow [cfs]')
 plt.ylabel('Count')
+#___________________________________________________
 
-#__________________________
+daybins = np.linspace(0, 30, num=30)
+
+plt.hist(flow_data[(flow_data[:,0] >= 2010) & (flow_data[:,1] == 9) & \
+        (flow_data[:,3] > 95),2], bins = daybins)
+plt.title('Streamflow for Sept > 95cfs since 2010')
+plt.xlabel('Day of the Month')
+plt.ylabel('Count')
+#___________________________________________________
+
 ## Example 4: Get the quantiles of flow
 
 # 4.a  Apply the np.quantile function to the flow column 
 # grab out the 10th, 50th and 90th percentile flow values
-flow_quants1 = np.quantile(flow_data[:,3], q=[0.1, 0.6, 0.9])
+flow_quants1 = np.quantile(flow_data[(flow_data[:,0] >= 2010) & (flow_data[:,1] == 9),3], q=[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
 print('Method one flow quantiles:', flow_quants1)
 
 # 4.b  use the axis=0 argument to indicate that you would like the funciton 
@@ -118,5 +158,3 @@ flow_quants2 = np.quantile(flow_data, q=[0,0.1, 0.5, 0.9], axis=0)
 #note flow_quants2 has 4 columns just like our data so we need to say flow_quants2[:,3]
 # to extract the flow quantiles for our flow data. 
 print('Method two flow quantiles:', flow_quants2[:,3]) 
-
-# %%
