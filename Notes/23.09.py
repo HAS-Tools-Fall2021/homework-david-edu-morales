@@ -22,3 +22,33 @@ np.max(x3)
 # np.floor(x1/x2)
 ## np.max(x3)
 # %%
+# Conditional Statement demonstration:
+hunger = 2.9
+
+if 8 <= hunger <= 10:
+    print("Eat a meal!")
+elif 3 <= hunger < 8:
+      print("Eat a snack!")
+else:
+    print("Remember to hydrate.")
+
+# For Loop demonstration:
+hunger_list = [1,6,3,7,8,4,2,9,10]
+
+for i in hunger_list:
+    if 8 <= i <= 10:
+        print("Eat a meal!")
+    elif 3 <= i < 8:
+        print("Eat a snack!")
+    else:
+        print("Remember to hydrate.")
+
+# List comprehension 
+hunger_list = [1,6,3,7,8,4,2,9,10]
+
+new_hunger_list = [i for i in hunger_list if i >= 3]
+
+print(np.round(np.mean(new_hunger_list), 2))
+
+
+# %%
