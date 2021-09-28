@@ -1,5 +1,9 @@
 # David Morales, 09/26/2021, HW5
 
+____
+## Grade
+3/3: Grerat work!  I like what you were doing isolating the late september early octobe parts. FYI you don't need to go into a list to merge them thoug you can just do that dirctly from your dataframes. Also I dont think it will be good to set year as the index because this is not going to be unique for every entry. Feel free to come by my office hoursr if you want to go over this more. 
+
 ## Rationale:
 I started this exercise exploring how I could isolate the 7-day week across years so that I could take the average flow. It was difficult understanding how I could isolate the relevant September and October dates in a single line of code; it's still unclear to me how to filter for rows that satisfy multiple double conditions in a single line of code (e.g., month == 9 & day >= 27 AND month == 10 & day <= 3).
 
