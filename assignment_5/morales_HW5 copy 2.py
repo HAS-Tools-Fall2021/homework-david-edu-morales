@@ -4,6 +4,7 @@
 # Import the modules we will use
 import os
 import numpy as np
+from numpy.core.fromnumeric import mean
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -87,3 +88,22 @@ ax.bar(x=test_view.index,
        color="green")
 ax.set(title="Plot of Avg. Flow 9/27-10/3 since 1989")
 plt.show()
+
+# %%
+# Practicing with for loops
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+wk1_avg=np.zeros(32)
+for m in range(32):
+        #get date range
+        sept_days = data[(data['day'] >= 27) & (data['month'] == 9) & 
+        (data['year'] == (1989+m))]
+        oct_days = data[(data['day'] <= 3) & (data['month'] == 10) & 
+        (data['year'] == (1989+m))]
+        # extract flow values from dates
+        floop_avg = ((sept_days['flow'].sum() + oct_days['flow'].sum())/7)
+        wk1_avg[m] = floop_avg
+        
+print(wk1_avg)
+
+sept_days.append(oct_days).info()       
+# %%
