@@ -1,5 +1,9 @@
 # David Morales, 10/04/2021, HW6
 
+____
+## Grade
+3/3: Awesome job! I really like the logic behind your graphs and how you are using them to inform your decision making. Just remember to include your final prediciton next time too. 
+___
 
 ## Rationale:
 1. 
