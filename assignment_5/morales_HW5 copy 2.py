@@ -100,10 +100,35 @@ for m in range(32):
         oct_days = data[(data['day'] <= 3) & (data['month'] == 10) & 
         (data['year'] == (1989+m))]
         # extract flow values from dates
-        floop_avg = ((sept_days['flow'].sum() + oct_days['flow'].sum())/7)
-        wk1_avg[m] = floop_avg
+        wk1_avg[m] = ((sept_days['flow'].sum() + oct_days['flow'].sum())/7)
+        
         
 print(wk1_avg)
 
 sept_days.append(oct_days).info()       
+
+
+# %%
+# Practicing with above to make more effecient
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
+wk1_avg=np.zeros(32)
+for m in range(32):
+        #get date range
+        sept_days = data[(data['day'] >= 27) & (data['month'] == 9) & 
+                         (data['year'] == (1989+m))]
+        oct_days = data[(data['day'] <= 3) & (data['month'] == 10) & 
+                        (data['year'] == (1989+m))]
+        # extract flow values from dates
+        wk1_avg[m] = np.mean(sept_days.append(oct_days).flow)
+        
+        
+print(wk1_avg)
+
+# sept_days.append(oct_days).info() 
+# %%
+df = pd.DataFrame(sept_days.flow, oct_days.flow, columns=["sept","oct"]) 
+# %%
+df
+# %%
+sept_days.flow
 # %%

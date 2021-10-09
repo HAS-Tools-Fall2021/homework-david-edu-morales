@@ -127,4 +127,16 @@ for m in range(9,13):
 plt.show()
 
 
-#Figure out how to do multi conditionals
+# %%
+def month_flow_median(month, days_in_month, start_year, data):
+        median_flow = np.zeros(days_in_month)
+        for d in range(days_in_month):
+                daytemp = d+1
+                tempdata = data[(data['year'] >= start_year) & (data['month'] == month) & (data['day'] == daytemp)]
+                median_flow[d] = np.median(tempdata['flow'])
+                print('Iteration', d, 'Day=', daytemp, 'Flow=', median_flow[d])
+        return median_flow
+
+month_flow_median(10, 31, 2016, data)
+
+# %%
