@@ -31,18 +31,28 @@ Take care,
 David
 
 Forecast Values:
+
 Week 1 forecast: 130.48
+
 Week 2 forecast: 124.23
 
 Plots:
 [Mean flow by year](../data/yearly_means.png)
+
 [Change in mean by year](../data/yearly_delta.png)
+
 [Scatter plot of yearly mean change](../data/delta_scatter.png)
+
 [Mean flow by year for 10/11 to 10/17](../data/yearly_mean_wk1.png)
+
 [Change in mean by year for 10/11 to 10/17](../data/yearly_delta_wk1.png)
+
 [Scatter plot of yearly mean change for 10/11 to 10/17](../data/delta_scatter_wk1.png)
+
 [Mean flow by year for 10/18 to 10/24](../data/yearly_mean_wk2.png)
+
 [Change in mean by year for 10/18 to 10/24](../data/yearly_delta_wk2.png)
+
 [Scatter plot of yearly mean change for 10/18 to 10/24](../data/delta_scatter_wk2.png)
 
 Code Review:
