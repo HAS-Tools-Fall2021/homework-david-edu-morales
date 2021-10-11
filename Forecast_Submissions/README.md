@@ -1,14 +1,22 @@
 # Instructions for HW7 Partner Assignment:
 
 ## Intro:
+<<<<<<< Updated upstream
 Hello. I tried to make the script and these instructions as straightfoward as I could; honestly, it's as simple as running each cell sequentially. I wasn't sure what I was supposed to set up for you, nor did I understand if--and to what degree--you were supposed to interact with the code.
+=======
+Hello. I tried to make the script and these instructions as straightfoward as I could; honestly, it's as simple as running each cell sequentially. I wasn't sure what I was supposed to set up for you, nor did I understand if--and to what degree--you were supposed to interact with the code. 
+>>>>>>> Stashed changes
 
 Enjoy!
 
 ## Summary:
 This script begins with:
 - Package Import
+<<<<<<< Updated upstream
 
+=======
+  
+>>>>>>> Stashed changes
 Which is followed by:
 - Filepath creation
 - Data read-in
@@ -30,6 +38,7 @@ Take care,
 
 David
 
+<<<<<<< Updated upstream
 Forecast Values:
 
 Week 1 forecast: 130.48
@@ -61,3 +70,5 @@ Easiness of script to understand: 2/3.  First function is written very well, des
 Pep8 Format: 3/3.  Very good formatting, no warnings or errors after turning on the linter.
 
 Code efficiency: 2.5/3.  A lot is being done by this code, but it manages to do everything in an efficient manner.  Functions are prompt, expedite the running of code, and statements and operations are kept to one line if possible.  The code remains readable throughout, but there is a minor error in the final print statement: the forecast values are supposed to be rounded, but this rounding is not done until after the print statement.  Other than that, though, the code is easily understood an runs efficiently.
+=======
+>>>>>>> Stashed changes
