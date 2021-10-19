@@ -1,5 +1,17 @@
 # David Morales, 10/18/21, HW8
 
+____________
+## Grade:
+### 1. Forecast Submision: 
+**3/3:** Great job! I really like your plots and how thoughtful you have been in their creation.
+
+### 2. Graded Script
+Refer to [the rubric](https://github.com/HAS-Tools-Fall2021/Course-Materials21/blob/main/Content/Starter_Codes/week7_code_review_rubric.md) for details on scoring: 
+- **Readability:3/3** Excellent job with the doc strings very easly to follow!
+- **Style:3/3** No pep-8 errors
+- **Code:2.5/3** Looks great I was able to run it through with no issues. I really like all of your functions. I just substracted 0.5 for the lack of additional timeseries functionality. Also a note -- you `Qavg_df` function can be shortetned so that it doesn't need a for loop by using offsets. We will talk about that this week. 
+____________
+
 ## Rationale:
 
 1. I generated my forecasts using the weekly mean flow for the week of Oct. 17-23 since 2010 because of the obvious shift in average flow from 1989-present and 2010-present. I believe that incorporating pre-2010 data  shifts these statistical measures significantly in a way that isn't predicitive with recent history.
