@@ -1,5 +1,10 @@
 # David Morales, 10/25/2021, HW9
 
+____________
+## Grade:
+**2.5/3:** Nice work. I like the graph you generated. For the second graph I was looking for anything you looked at that helped you make your guess (e.g. a plot of flow values this week). I just subtracted 0.5 for the missing last graph. 
+____________
+
 ## Rationale:
 
 I decided to guess this time for my forecast values. Despite relying on data to calculate historic weekly means for the past seven or so weeks, I remain in last. That being said, I looked at the graph that I generated concerning observed rainfall near the headwaters of the Verde River and the observed weekly flow of the Verde River. It seems that flow increases after Oct. while rainfall varies. 
