@@ -127,3 +127,23 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+data/Arizona_State_Boundary-fgdb/d09edca433824603876f0a303adb5404.gdb/
+
+data/National_Inventory_of_Dams_-_Arizona_(2018)/
+
+data/NHDPLUS_H_1506_HU4_GDB/NHDPLUS_H_1506_HU4_GDB.gdb/
+
+data/Streams___Ephemeral_and_Perennial-fgdb/da8b1752469249739bb82c3bbe816d3f.gdb/
+
+data/WFIGS_-_2021_Wildland_Fire_Perimeters_to_Date/
+
+data/gagesII_9322_point_shapefile/
+
+data/NHDPLUS_H_1506_HU4_GDB/
+
+data/Streams___Ephemeral_and_Perennial-shp/
+
+data/US_4-digit_HUs(Subregion)/
+
+data/US_4-digit_HUs_AZ/
