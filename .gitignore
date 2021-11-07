@@ -147,3 +147,5 @@ data/Streams___Ephemeral_and_Perennial-shp/
 data/US_4-digit_HUs(Subregion)/
 
 data/US_4-digit_HUs_AZ/
+
+*.nc
