@@ -1,4 +1,8 @@
 # David Morales, 11/7/2021, HW11
+_____
+### Grade
+3/3 - Great job. I like your rational for looking into specific humidity!
+_____
 
 ### Rationale:
 1. The data I used to generate my forecast this week still included the streamflow data from the USGS stream gauge. I find this to be the best, most easily incorporated data thus far.
