@@ -100,7 +100,7 @@ y = W_strfdata['flow'].values
 
 # %%
 # Generate forecast using function
-linreg_forecast(x, y, 0)
+linreg_forecast(x, y, 0) # using a precip forecast value of 0 mm/day
 
 # %% Make a timeseries plot
 fig, ax = plt.subplots(figsize=(6, 4))
