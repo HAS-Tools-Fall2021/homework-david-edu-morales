@@ -11,7 +11,7 @@ import geopandas as gpd
 import fiona
 import shapely
 from netCDF4 import Dataset
-from   sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression
 import datetime
 import dataretrieval.nwis as nwis
 import os
@@ -100,7 +100,7 @@ y = W_strfdata['flow'].values
 
 # %%
 # Generate forecast using function
-linreg_forecast(x, y, 0) # using a precip forecast value of 0 mm/day
+linreg_forecast(x, y, 0)  # using a precip forecast value of 0 mm/day
 
 # %% Make a timeseries plot
 fig, ax = plt.subplots(figsize=(6, 4))
