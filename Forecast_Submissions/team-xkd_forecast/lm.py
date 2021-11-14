@@ -70,7 +70,7 @@ ax2.plot(wk_prate.index, wk_prate['prate'], color='blue')
 ax2.invert_yaxis()
 
 ax.set(title="Daily Meteorology Times Series \n (09506000 VERDE RIVER NEAR \
-CAMP VERDE, AZ",  xlabel="Year", ylabel=r'Flow ($ft^3$/s)', ylim=(0, 9000))
+CAMP VERDE, AZ)",  xlabel="Year", ylabel=r'Flow ($ft^3$/s)', ylim=(0, 9000))
 ax2.set(ylabel='Precipitation (mm/day)', ylim=(6.5, 0))
 
 plt.show()
