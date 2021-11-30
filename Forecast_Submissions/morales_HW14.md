@@ -2,6 +2,11 @@
 
 ## Discussion
 
+____
+## Grade
+3/3: Great job!  I'm sorry you weren't able to get it running but I think your experience is representative of what a lot of research codes look like. Its a good example of how much work it takes to actually make somethign usable for others. 
+____
+
 ### 1. Paper information:
    - Title: Hot extremes have become drier in the United States Southwest
    - Link: https://www.nature.com/articles/s41558-021-01076-9
