@@ -1,0 +1,42 @@
+This job is running on node r1u08n2.puma.hpc.arizona.edu
+This job is allocated 1 node(s), 1 core(s)/node and 5 Gigabytes of memory
+First DataFrame stats:
+           year     flow       dQ
+count    33.00    32.00    32.00
+mean   2005.00   324.05    -1.22
+std       9.67   482.53   714.23
+min    1989.00   165.14 -2352.00
+25%    1997.00   190.07   -15.18
+50%    2005.00   201.21    -2.50
+75%    2013.00   213.18    13.39
+max    2021.00  2517.14  2342.28 
+First Dataframe median: 201.21499999999997
+First DataFrame stats:
+           year     flow       dQ
+count    12.00    11.00    11.00
+mean   2015.50   403.49    -2.44
+std       3.61   701.32  1049.90
+min    2010.00   165.14 -2352.00
+25%    2012.75   179.00   -16.93
+50%    2015.50   188.14     0.00
+75%    2018.25   213.14    13.50
+max    2021.00  2517.14  2342.28 
+First Dataframe median: 188.14
+
+Second DataFrame stats:
+           year    flow      dQ
+count    12.00   11.00   11.00
+mean   2015.50  246.95   -2.71
+std       3.61   97.63  163.23
+min    2010.00  173.43 -291.29
+25%    2012.75  189.14  -34.07
+50%    2015.50  216.29   -2.14
+75%    2018.25  240.64   30.49
+max    2021.00  474.86  280.15 
+Second DataFrame median: 216.29
+
+------------------------
+
+Week 1 forecast: 403.49 
+Week 2 forecast: 246.95
+Detailed performance metrics for this job will be available at https://metrics.hpc.arizona.edu/#job_viewer?action=show&realm=SUPREMM&resource_id=73&local_job_id=2690060 by 8am on 2021/12/03.
