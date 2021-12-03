@@ -15,10 +15,8 @@
    source ~/mypyenv/bin/activate
    ```
    It is not quite clear to me why this needed to be reincorporated into the run_python.sh file after we had already incorporated it into the shell. As far as the confusing part regardng running the job, it was actually very straightforward once we got it set up as a classroom. It was difficult for me to run the Jupyter Notebook interactively through OnDemand, however that wasn't done through Puma.
-
-3. Where else did you run your job? How did the setup compare to your run on Puma?
    
-4. I don't have a lot of questions regarding the homework assignment, however I am interested in parallel computing, regardless of whether I think I will need it for my thesis work or not.
+3. I don't have a lot of questions regarding the homework assignment, however I am interested in parallel computing, regardless of whether I think I will need it for my thesis work or not.
 
 
 
