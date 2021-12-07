@@ -1,5 +1,8 @@
 # David Morales, 12/02/21, HW15
 
+### Grade: 
+3/3 - Great job! We will talk more about your question in the code tomorrow. Please bring it up if I forget. 
+
 ### Rationale:
 
 1. According to the *slurm* output file, I used the following resources: 
